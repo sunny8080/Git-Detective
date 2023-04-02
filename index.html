@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Git Detective | Sunny</title>
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- meta tags -->
+        <!-- Twitter -->
+        <meta name="twitter:card" content="" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="GitDetective - By Sunny" />
+        <meta name="twitter:description" content="GitDetective App by using HTML, CSS and JavaScript. Here you can search anyone's github profile by their username." />
+        <meta name="twitter:image" content="https://i.postimg.cc/gJktvfWJ/git.jpg" />
+
+        <!-- Facebook -->
+        <meta property="og:url" content="https://sunny8080-weather-app.netlify.app/" />
+        <meta property="og:title" content="GitDetective - By Sunny" />
+        <meta property="og:description" content="GitDetective App by using HTML, CSS and JavaScript. Here you can search anyone's github profile by their username." />
+        <meta property="og:type" content="Detective-App" />
+        <meta property="og:image" content="https://i.postimg.cc/gJktvfWJ/git.jpg" />
+        <meta property="og:image:type" content="image/jpg" />
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <!-- heading container -->
+                <div class="heading sub-container">
+                    <h1>GitDetective</h1>
+                    <button class="btn-mode">
+                        <p id="mode-text">Dark</p>
+                        <div class="mode-icon-container">
+                            <img id="mode-icon" src="./assets/moon-icon.svg" alt="" />
+                        </div>
+                    </button>
+                </div>
+
+                <!-- search container -->
+                <form class="search-container sub-container">
+                    <input id="input" type="search" name="user-input" placeholder="Enter a GitHub UserName..." required />
+                    <p class="error-msg">no search results</p>
+                    <button class="search-btn" type="submit">Search</button>
+                </form>
+
+                <!-- profile container -->
+                <div class="profile-container sub-container">
+                    <!-- profile content -->
+                    <div class="profile-content">
+                        <!-- profile header -->
+                        <div class="profile-header">
+                            <img id="avatar" alt="user-avatar" />
+
+                            <div class="profile-info-container">
+                                <div class="user-details">
+                                    <p data-userName></p>
+                                    <a href="" target="_blank" rel="noopener noreferrer" data-userProfileLink></a>
+                                </div>
+                                <p id="date"></p>
+                            </div>
+                        </div>
+
+                        <p id="bio"></p>
+
+                        <!-- user stats container -->
+                        <div class="user-stats-container">
+                            <div class="user-stat">
+                                <p class="stat-title">Repos</p>
+                                <p class="state-value" id="repos"></p>
+                            </div>
+
+                            <div class="user-stat">
+                                <p class="stat-title">Followers</p>
+                                <p class="state-value" id="followers"></p>
+                            </div>
+
+                            <div class="user-stat">
+                                <p class="stat-title">Following</p>
+                                <p class="state-value" id="following"></p>
+                            </div>
+                        </div>
+
+                        <!-- about container -->
+                        <div class="about-container">
+                            <div class="about">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <p data-userLocation></p>
+                            </div>
+
+                            <div class="about">
+                                <i class="fa-solid fa-link"></i>
+                                <a data-userWebsiteLink></a>
+                            </div>
+
+                            <div class="about">
+                                <i class="fa-brands fa-twitter"></i>
+                                <a data-userTwitterLink></a>
+                            </div>
+
+                            <div class="about">
+                                <img src="./assets/company-icon.svg" alt="" />
+                                <p data-userCompany></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
